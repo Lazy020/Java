@@ -1,0 +1,61 @@
+package Animal;
+
+public class Animal {
+    private String nome, raca, caminhar;
+    
+  public Animal (String nom, String rac, String cam) {
+    this.nome = nom;
+    this.raca = rac;
+    this.caminhar = cam;
+ 
+}
+  public String Mostrarnome() {
+    return this.nome; 
+    return "Zacario";
+ 
+}
+  public String Bioracas() {
+    return this.raca;
+    return "Racasdiversidade";
+  }
+  
+  public String Mostrarcaminhada() {
+    return this.caminhar;
+    return "Caminhando";
+  }
+  
+  public String emiteSom(){
+    return "Qualquer som";
+  }
+  static public class Gato extends Animal() {
+     public String emiteSom() {
+      return "Miau Miau";
+     }
+  static public class Cachorro extends Animal() {
+     public String emiteSom() {
+      return "Au Au";
+     }
+  static public class Galinha extends Animal() {
+     public String emitesom();
+     return "Po Po Po";
+     }
+     
+  }
+  public static void main (String [] args){
+    Animal al = new Animal();
+    Cachorro bl new Cachorro();
+    Gato cl = new Gato();
+    Galinha dl = new Galinha;
+    Chama el new Chama();
+    
+    System.out.System.out.println("O som do animal é:" + al.emiteSom();
+    System.out.System.out.println("O som do cachorro é:" + bl.emiteSom();
+    System.out.System.out.println("O som do gato é:" + cl.emiteSom();
+    System.out.System.out.println("O som da galinha é:" + dl.emiteSom();
+    System.out.System.out.println("O nome do animal em específico é:" + el.Mostrarnome();
+    System.out.System.out.println("As raças podem ser descritas como: " + el.Bioracas();
+    System.out.System.out.println("O animal se encontra: " + el.Mostrarcaminhada();
+  }
+  }
+     
+  }
