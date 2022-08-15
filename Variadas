@@ -59,3 +59,94 @@ public class Animal {
   }
      
   }
+
+package informacoes;
+
+public class Empregado {
+  private int codigo;
+  private String nome, email;
+  protected double salario;
+  
+ public Empregado (int cod, String nom, String mail, double sal) {
+    this.codigo = cod;
+    this.nome = no;
+    this.email = mail;
+    this.salario = sal;
+ }
+ 
+ public int codigo() {
+    return this.codigo;
+ }
+ 
+ public String nome() {
+    return this.nome;
+ }
+ 
+ public String email(){
+    return this.email;
+ }
+ 
+ public double salario() {
+    return this.salario;
+ }
+ 
+ public double aumentosalarial (double percentual) {
+     return this.salario * (percentual/100);
+ }
+ 
+ public class Chefe extends Empregado {
+    private double beneficio;
+ }
+ 
+ public Chefe (int cod, String nom, String mail, double sal, double ben) {
+     super(cod, nome, mail, sal);
+     this.beneficio = ben;
+     
+ }
+ 
+  public double aumentosalarial (double percentual) {
+     return this.salario * (percentual/100) + this.beneficio;
+}
+}
+
+  public class Estagiario extends Empregado {
+     private int desconto;
+  }
+  
+  public Estagiario (int cod, String nom, String mail, double sal, int des) {
+    super(cod, nome, mail, sal);
+    this.desconto = des;
+  }
+  
+    public double aumentosalarial (double percentual) {
+     return this.salario * (percentual/100) - this.desconto;
+  
+  }
+  }
+  
+   public static void main (String[} args) {
+      Empregado em = new Empregado(2098, "Dan", "dankenner@gmail.com", 2400);
+      
+      System.out.System.out.println("O código do empregado é: " + em.codigo());
+      System.out.System.out.println("O nome do empregado é: " + em.nome());
+      System.out.System.out.println("O e-mail do empregado é: " + em.email());
+      System.out.System.out.println("O salário do empregado é: " + em.salario());
+      System.out.System.out.println("O aumento destse empregdo é: " + em.aumentosalarial());
+      
+      Chefe che = new Chefe(3000, "Lou", "Lounel@gmail.com", 3000);
+      System.out.System.out.println("O código do chefe é: " + che.codigo());
+      System.out.System.out.println("O nome do chefe é: " + che.nome());
+      System.out.System.out.println("O e-mail do chefe é: " + che.email());
+      System.out.System.out.println("O salário do chefe é: " + che.salario());
+      System.out.System.out.println("O benefício desse chefe é: " + che.aumentosalarial());
+      
+       Estagiario esta = new Estagiario(8954, "Luccs", "LUccsde@gmail.com", 2000);
+       System.out.System.out.println("O código do estagiário é: " + esta.codigo());
+       System.out.System.out.println("O nome do estagiário é: " + esta.nome());
+       System.out.System.out.println("O e-mail do estagiário é: " + esta.email());
+       System.out.System.out.println("O salário do estagiário é: " + esta.salario());
+       System.out.System.out.println("O desconto desse estagiário é: " + esta.aumentosalarial());
+ 
+   }
+   
+  }
